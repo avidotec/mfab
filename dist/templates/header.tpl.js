@@ -1,8 +1,8 @@
 (function(module) {
 try {
-  module = angular.module('mobile.famous.angular.templates');
+  module = angular.module('mfab.templates');
 } catch (e) {
-  module = angular.module('mobile.famous.angular.templates', []);
+  module = angular.module('mfab.templates', []);
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('go-header.tpl.html',
