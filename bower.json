@@ -4,6 +4,7 @@
   "authors": [
     "Gabriel Mancini <gabriel.mancini@gmail.com>"
   ],
+  "main": "index.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -11,5 +12,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "famous-angular": "~0.5.0",
+    "roboto-fontface": "~0.2.4"
+  }
 }

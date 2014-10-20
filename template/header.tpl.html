@@ -1,0 +1,40 @@
+<fa-container-surface fa-options="headerOptions">
+  <fa-modifier fa-size="[44, 44]">
+    <fa-modifier fa-align="[.5, .5]" fa-origin="[.5, .5]" fa-opacity="1 - $sidemenu.transform.get()*.01" fa-rotate-z="-$sidemenu.transform.get()*0.0159">
+      <fa-surface fa-options="{ properties: { textAlign: 'center' } }">
+        <a fa-click="$sidemenu.toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </fa-surface>
+    </fa-modifier>
+    <fa-modifier fa-align="[.5, .5]" fa-origin="[.5, .5]" fa-opacity="$sidemenu.transform.get()*0.019" fa-rotate-z="-$sidemenu.transform.get()*0.0159">
+      <fa-surface fa-options="{ properties: { textAlign: 'center' } }">
+        <a fa-click="$sidemenu.toggleMenu()">
+          <i class="fa fa-times"></i>
+          <!-- <i class="fa fa-plus"></i> -->
+        </a>
+      </fa-surface>
+    </fa-modifier>
+  </fa-modifier>
+  <fa-modifier fa-size="[true, 44]" fa-translate="[44, 0]">
+    <fa-surface fa-size="[true, 44]" fa-options="{ properties: { textAlign: 'center' } }">
+      {{ $page.title }}
+    </fa-surface>
+  </fa-modifier>
+  <fa-modifier fa-size="[44, 44]" fa-origin="[1, 0]">
+    <fa-modifier fa-align="[.5, .5]" fa-origin="[.5, .5]" fa-translate="[-44, 0]">
+      <fa-surface fa-options="{ properties: { textAlign: 'center' } }">
+        <a fa-click="$sidemenu.toggleMenu()">
+          <i class="fa fa-search"></i>
+        </a>
+      </fa-surface>
+    </fa-modifier>
+    <fa-modifier fa-align="[.5, .5]" fa-origin="[.5, .5]">
+      <fa-surface fa-options="{ properties: { textAlign: 'center' } }">
+        <a fa-click="$sidemenu.toggleMenu()">
+          <i class="fa fa-ellipsis-v"></i>
+        </a>
+      </fa-surface>
+    </fa-modifier>
+  </fa-modifier>
+</fa-container-surface>
