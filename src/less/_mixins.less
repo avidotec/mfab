@@ -1,0 +1,72 @@
+// usage: .variations(~" .check", color, transparent);
+.variations(@extra, @property, @default) {
+    &@{extra}, &-default@{extra} {
+        @{property}: @default;
+    }
+    &-primary@{extra} {
+        @{property}: @primary;
+    }
+    &-success@{extra} {
+        @{property}: @success;
+    }
+    &-info@{extra} {
+        @{property}: @info;
+    }
+    &-warning@{extra} {
+        @{property}: @warning;
+    }
+    &-danger@{extra} {
+        @{property}: @danger;
+    }
+    &-red@{extra} {
+        @{property}: @red;
+    }
+    &-pink@{extra} {
+        @{property}: @pink;
+    }
+    &-purple@{extra} {
+        @{property}: @purple;
+    }
+    &-deeppurple@{extra} {
+        @{property}: @deeppurple;
+    }
+    &-indigo@{extra} {
+        @{property}: @indigo;
+    }
+    &-lightblue@{extra} {
+        @{property}: @lightblue;
+    }
+    &-cyan@{extra} {
+        @{property}: @cyan;
+    }
+    &-teal@{extra} {
+        @{property}: @teal;
+    }
+    &-lightgreen@{extra} {
+        @{property}: @lightgreen;
+    }
+    &-lime@{extra} {
+        @{property}: @lime;
+    }
+    &-lightyellow@{extra} {
+        @{property}: @lightyellow;
+    }
+    &-orange@{extra} {
+        @{property}: @orange;
+    }
+    &-deeporange@{extra} {
+        @{property}: @deeporange;
+    }
+    &-grey@{extra} {
+        @{property}: @grey;
+    }
+    &-bluegrey@{extra} {
+        @{property}: @bluegrey;
+    }
+    &-brown@{extra} {
+        @{property}: @brown;
+    }
+    &-lightgrey@{extra} {
+        @{property}: @lightgrey;
+    }
+}
