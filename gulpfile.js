@@ -72,10 +72,11 @@ gulp.task('clean:dist', function() {
 /**
  * Watch
  */
-// gulp.task('watch', function () {
-//   gulp.watch(paths.scripts, ['build:concat']);
-//   gulp.watch(paths.templates, ['build:concat']);
-// });
+gulp.task('watch', function () {
+  // gulp.watch(paths.scripts, ['build:concat']);
+  // gulp.watch(paths.templates, ['build:concat']);
+  gulp.watch(['src/less/*.less'], ['dist:css']);
+});
 
 /**
  * Default

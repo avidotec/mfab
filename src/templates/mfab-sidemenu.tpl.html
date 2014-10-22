@@ -3,7 +3,7 @@
     <fa-scroll-view fa-pipe-from="$sidemenu.eventHandler" fa-options="{ clipSize: 0, paginated: false, speedLimit: 5, direction: 1 }">
       <fa-view ng-repeat="item in items">
         <fa-modifier fa-size="item.options.size||[undefined, 44]">
-          <fa-surface fa-options="item.options">
+          <fa-surface fa-options="item.options" ng-class="{'mfab-p16-lr': true}">
             <a ui-sref="{{item.uiSref}}" fa-pipe-to="$sidemenu.eventHandler" ng-bind="item.title"></a>
           </fa-surface>
         </fa-modifier>
@@ -12,14 +12,14 @@
   </fa-modifier>
 </fa-modifier>
 
-<fa-surface fa-size="[undefined, 184]" fa-options="{classes:['sidemenu-header-pink']}"></fa-surface>
+<fa-surface fa-size="[undefined, 156]" fa-options="{classes:['mfab-pink']}"></fa-surface>
 
 <fa-modifier fa-translate="[0, 60]">
-  <fa-surface fa-size="[undefined, 64]" fa-options="{classes:['padding', 'sidemenu-img']}">
+  <fa-surface fa-size="[undefined, 64]" fa-options="{classes:['mfab-p16-lr']}">
     <img src="http://placehold.it/64x64">
   </fa-surface>
-  <fa-modifier fa-size="[undefined, true]" fa-translate="[0, 96]">
-    <fa-surface fa-options="{classes:['padding', 'sidemenu-title', 'sidemenu-title-pink']}">
+  <fa-modifier fa-size="[undefined, 28]" fa-translate="[0, 96]">
+    <fa-surface fa-options="{classes:['mfab-p16-lr', 'mfab-sidemenu-title', 'mfab-pink']}">
       <h1>João Neto</h1>
     </fa-surface>
   </fa-modifier>

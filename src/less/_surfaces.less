@@ -1,15 +1,35 @@
-.mfab-surface {
-  .variations(~"", background-color, #FFFFFF);
-  &-primary, &-info, &-danger, &-warning, &-success {
-    color: #FFFFFF;
-    a {
-      color: #FFFFFF;
-    }
+.palette() {
+  .fg(@p) when not (@p = false) {
+      color: @p;
   }
-  &-default {
-    color: #FFFFFF;
-    a {
-      color: #000000;
-    }
+
+  .bg(@p) when not (@p = false) {
+      background-color: @p;
   }
+
+  .-(@x: length(@themes)) when (@x > 0) {
+      @themeName: e(extract(@themes, @x));
+      @themeNameFg: e('@{themeName}-fg');
+      &-@{themeName} {
+          .fg(@@themeNameFg);
+          .bg(@@themeName);
+
+          .-(@y: length(@palette)) when (@y > 0) {
+              @paletteName: e(extract(@palette, @y));
+              @paletteNameBg: e('@{themeName}-@{paletteName}');
+              @paletteNameFg: e('@{themeName}-@{paletteName}-fg');
+              &-@{paletteName} {
+                  .fg(@@paletteNameFg);
+                  .bg(@@paletteNameBg);
+              }
+              .-((@y - 1));
+          } .-;
+      }
+      .-((@x - 1));
+  } .-;
+}
+
+.mfab {
+  // .variations(~"", background-color, #FFFFFF);
+  .palette();
 }
